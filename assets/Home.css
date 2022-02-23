@@ -4,12 +4,30 @@
     box-sizing: border-box;
 }
 
-#header img{
-    width: 50px;
-    position:relative;
+ .logo1 img{
+    width: 28px;
     left: 20px;
     top: 0px;
-    line-height: 50px;
+    height: 28px;
+    line-height: 55px;
+}
+
+.logo2 img{
+    
+    width: 130px;
+    left: 20px;
+    top: 0px;
+    height: 70px;
+}
+
+.logo3  img{
+    width: 28px;
+    left: 20px;
+    top: 0px;
+    height: 28px;    
+}
+
+.loginform {
     display: inline-block;
 }
 
@@ -23,18 +41,25 @@ ul {
     background-color: #000;
 }
 #header{
-    height: 70px;
+    height: 100px;
     background-color: #fff;
     padding-top: 15px;
     padding-bottom: 15px;
+    
 }
+.row {
+    display: flex;
+    justify-content:baseline;
+    height: 55px;
+
+}
+
 #container{
     background-color: rgb(204, 1, 1);
     height:50px;
     padding:0 15px;
     /* margin-left: 64px;
     margin-right: 64px; */
-
 }
 #nav >li{
     display: inline-block;
