@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+#header img{
+    width: 50px;
+    position:relative;
+    left: 20px;
+    top: 0px;
+    line-height: 50px;
+    display: inline-block;
+}
+
 html{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -14,7 +23,7 @@ ul {
     background-color: #000;
 }
 #header{
-    height: 50px;
+    height: 70px;
     background-color: #fff;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -25,6 +34,7 @@ ul {
     padding:0 15px;
     /* margin-left: 64px;
     margin-right: 64px; */
+
 }
 #nav >li{
     display: inline-block;
