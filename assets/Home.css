@@ -5,10 +5,10 @@
 }
 
  .logo1 img{
-    width: 28px;
+    width: 35px;
     left: 20px;
     top: 0px;
-    height: 28px;
+    height: 35px;
     line-height: 55px;
     margin-top: 20px;
 }
@@ -45,11 +45,13 @@
 
 .searchbar{
     margin-top: 30px;
-    margin-left:300px;
+    margin-left:100px;
+    
 }
 .search{
     height: 30px;
 }
+
 .search2{
  height: 30px;
  border-radius: 1px;
@@ -72,19 +74,23 @@ ul {
     background-color: #fff;
     padding-top: 15px;
     padding-bottom: 15px;
-    
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1;
 }
 .row {
     display: flex;
     height: 55px;
+    justify-content: space-around;
 }
 
 #container{
     background-color: rgb(204, 1, 1);
     height:50px;
     padding:0 15px;
-    /* margin-left: 64px;
-    margin-right: 64px; */
+    margin-top: 100px;
 }
 #nav >li{
     display: inline-block;
@@ -100,6 +106,7 @@ ul {
     color: #000;
 }
 #nav .subnav{
+    display: none;
     position:absolute;
     font-size: 15px;
     box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
@@ -129,6 +136,10 @@ position: relative;
    width: 100%;  
 }
 
+#nav li:hover .subnav{
+    display: block;
+}
+
 #nav > li:hover > a{
     background: #b30101;
 }
@@ -137,8 +148,16 @@ position: relative;
 }
 
 #slider{
-  
-
+    margin-top: 10px;
+}
+.image{
+    display: flex;
+    justify-content: center;
+}
+.image img{
+    width: 50%;
+    height: 500px;
+    border-radius: 15px;
 }
 #content{}
 #footer{}
