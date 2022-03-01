@@ -11,3 +11,7 @@ document.getElementById('imgsl').src= imgs[index];
     
 }
 setInterval(changeImage,5000);
+
+function Show(){
+    
+}

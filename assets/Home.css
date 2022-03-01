@@ -3,14 +3,48 @@
     margin:0;
     box-sizing: border-box;
 }
-
- .logo1 img{
+body{
+    position: relative;
+    width: 100%;
+    min-height: 150vh;
+}
+.box-center{
+    width: 80%;
+    margin: 0 auto;
+}
+ .menu-logo img{
     width: 35px;
     left: 20px;
     top: 0px;
     height: 35px;
     line-height: 55px;
     margin-top: 20px;
+}
+.menu-box .subnav li a{
+    text-decoration: none;  
+}
+.menu-box {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    z-index: 1000;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+
+}
+.menu-box > ul{
+   width: 100%;
+    overflow: hidden;
+}
+.menu-box ul li a{
+    width: 100%;
+    font-size: 1.2em;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+ 
 }
 
 .logo2 img{
@@ -38,7 +72,9 @@
     text-decoration: none;
     color: #000;
 }
-
+.login span:hover > a{
+    color:#b30101;
+}
 .loginform {
     margin-left: 100px;
 }
@@ -67,7 +103,7 @@ ul {
     list-style: none;
     }
 #Main{
-    background-color: #000;
+    
 }
 #header{
     height: 100px;
@@ -150,14 +186,25 @@ position: relative;
 #slider{
     margin-top: 10px;
 }
-.image{
-    display: flex;
-    justify-content: center;
+
+article{
+    float: left;
+    width: 75%;
 }
-.image img{
-    width: 50%;
-    height: 500px;
+article img{
     border-radius: 15px;
+    height: 450px;
+    width: 90%;
+    margin-left: 100px;
+}
+aside{
+    float: left;
+    width: 25%;
+}
+aside img{
+    width: 90%;
+    height: 225px;
+    
 }
 #content{}
 #footer{}
