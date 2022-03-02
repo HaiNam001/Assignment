@@ -17,14 +17,14 @@
         <div id="header">
             <div class="row">
                 <div class="menu-logo">
-                    <li><i onclick="Show()" class="Menu-logo ti-menu"></i></li>    
+                    <li><i id="click" onclick="Show()" class=" ti-menu"></i></li>                     
                     </div>
                     <div class="menu-box" id="menu">
                     <ul>
+                        <li class="Menu">Menu</li>
                         <li class="has-child"><a href="">Trang chủ</a></li>
-                        <li class="has-child"><a href="">Tập luyện</a>
-                            <ul class="subnav">
-                                <li><a href="">Kiến thức căn bản</a></li>                    
+                        <li class="has-child"><a href="">Kiến thức</a>
+                            <ul class="subnav">                 
                                 <li><a href="">Các bài tập ngực</a></li>
                                 <li><a href="">Các bài tập lưng</a></li>
                                 <li><a href="">Các bài tập vai</a></li>
@@ -101,10 +101,9 @@
 
         <div id="container">
             <ul id="nav">
-                <li><a href="">Trang chủ</a></li>
-                <li><a href="">Tập Luyện</a>
-                <ul class="subnav">
-                    <li><a href="">Kiến thức căn bản</a></li>                    
+                <li><a href="Home.html">Trang chủ</a></li>
+                <li><a href="#Content">Kiến thức</a>
+                <ul class="subnav">                                 
                     <li><a href="">Các bài tập ngực</a></li>
                     <li><a href="">Các bài tập lưng</a></li>
                     <li><a href="">Các bài tập vai</a></li>
@@ -164,7 +163,94 @@
             </aside>          
         </div>
         </div>
-        <div id="content">
+        <div id="Content">
+            <div class="content-head">
+                <h2>Kiến thức</h2>
+            </div>
+            <div class="content">
+                <img src="assets/image/Gymlagi.jpg" alt="">
+                <div class="paragraph">
+                <h3><a href="">Gym là gì?</a></h3>
+                <p><a href=""> Bắt nguồn từ ngưỡng cổ Hy lạp, Gym = gymnasium có nghĩa là các hoạt động vận động và luyện tập cho cơ thể trong phòng tập...</a></p>
+                </div>
+            </div>
+            <div class="content">
+                <img src="assets/image/nguoimoitap.png " alt="">
+                <div class="paragraph">
+                <h3><a href=""> Người mới tập nên tập như thế nào?</a></h3>
+                <p><a href=""> Đầu tiên bạn cần làm trước khi đi tập đó là xác định chính xác mục tiêu tập Gym của mình, là tăng cân, giảm cân, giảm mỡ, duy trì vóc dáng hay đơn giản là muốn cải thiện sức khỏe...</a></p>
+                    </div>
+            </div>     
+           
+            <div class="content-head">
+                <h2><a href="">Giáo án</a></h2>
+            </div>
+            <div class="content">
+                <img src="assets/image/giaoan.jfif" alt="">
+                <div class="paragraph">
+                <h3><a href="">Chương trình tập 6 buổi/1 tuần?</a></h3>
+                <p><a href=""> Với giáo án tập gym 6 buổi cho nam này bạn sẽ có được 1 lịch tập hoàn hảo cho 1 tuần để giúp cơ bắp phát triển một cách toàn diện nhất...</a></p>
+                </div>
+            </div>
+            <div class="content">
+                <img src="assets/image/giáo án 2.jpg " alt="">
+                <div class="paragraph">
+                <h3><a href=""> Lịch tập cho nữ</a></h3>
+                <p><a href="">Là nữ với mong muốn tập Gym để sở hữu một vóc dáng vạn người mê. Chắc chắn rằng một giáo án, thực đơn, các bài tập gym cho nữ dưới đây là không thể bỏ qua...</a></p>
+                    </div>
+            </div>     
+
+            <div class="content-head">
+                <h2><a href="">Dinh Dưỡng</a></h2>
+            </div>
+            <div class="content">
+                <img src="assets/image/Dinh dưỡng 1.jpg" alt="">
+                <div class="paragraph">
+                <h3><a href="">Tìm hiểu về dinh dưỡng?</a></h3>
+                <p><a href="">Kiến thức dinh dưỡng thể hình là một chuyện quan trọng trong tập Gym. Bạn biết càng nhiều, bạn sẽ ăn uống càng chuẩn và cơ bắp càng phát triển nhanh chóng ...</a></p>
+                </div>
+            </div>
+            <div class="content">
+                <img src="assets/image/Dinh dưỡng 2.jpg" alt="">
+                <div class="paragraph">
+                <h3><a href="">Tầm quan trọng của dinh dưỡng?</a></h3>
+                <p><a href="">Dinh dưỡng đóng vai trò quan trọng đối với sức khỏe và sự phát triển của cơ thể. Một chế độ dinh dưỡng hợp lý sẽ giúp phát triển thể chất, cải thiện sức khỏe, tăng cường hệ miễn dịch...</a></p>
+                    </div>
+            </div>     
+            <div class="content-head">
+                <h2><a href="">Thực phẩm bổ sung</a></h2>
+            </div>
+            <div class="content">
+                <img src="assets/image/wheyprotein.png" alt="">
+                <div class="paragraph">
+                <h3><a href="">Whey protein là gì?</a></h3>
+                <p><a href="">Whey protein là một trong những protein chính được tìm thấy trong các sản phẩm sữa. Là một sản phẩm phụ tách ra từ quá trình sản xuất phô mai, whey protein cung ...</a></p>
+                </div>
+            </div>
+            <div class="content">
+                <img src="assets/image/multivitamin.jpg " alt="">
+                <div class="paragraph">
+                <h3><a href="">Bổ sung vitamin thế nào là hợp lý?</a></h3>
+                <p><a href="">Để tăng cường hệ miễn dịch trong thời điểm dịch bệnh hiện nay thì việc ưu tiên vitamin là cần thiết, trong đó các loại vitamin cần ưu tiên các...</a></p>
+                    </div>
+            </div>     
+            <div class="content-head">
+                <h2><a href="">Dụng cụ tập luyện</a></h2>
+            </div>
+            <div class="content">
+                <img src="assets/image/Đai-bảo-vệ-lưng-tập-gym.jpg" alt="">
+                <div class="paragraph">
+                <h3><a href="">Có nên sử dụng đai lưng?</a></h3>
+                <p><a href="">Khi nào thì nên đeo đai hỗ trợ. Đai lưng bụng tập gym hỗ trợ thường được dùng khi tập nặng với các bài phức hợp như Deadlift, Squat...</a></p>
+                </div>
+            </div>
+            <div class="content">
+                <img src="assets/image/quan-co-tay-b.jpg" alt="">
+                <div class="paragraph">
+                <h3><a href="">Tác dụng của băng quấn cổ tay,cổ chân?</a></h3>
+                <p><a href="">Dây quấn cổ tay (wrist wraps) là loại dây quấn giúp giữ vững cổ tay của các bạn (tránh chấn thương khớp cổ tay) khi tập thân trên (upper body) ở các bài như...</a></p>
+                    </div>
+            </div>     
 
         </div>
         <div id="footer">

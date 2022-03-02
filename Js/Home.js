@@ -13,5 +13,12 @@ document.getElementById('imgsl').src= imgs[index];
 setInterval(changeImage,5000);
 
 function Show(){
-document.getElementById("menu").src=;
+    var hidden = document.getElementsByClassName('menu-box');
+    if(hidden.style.display==='none'){
+        hidden.style.display === 'block';
+
+    }
+    else{
+        hidden.style.display==='none';
+    }
 }
