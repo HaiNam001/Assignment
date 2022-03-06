@@ -104,10 +104,22 @@ body{
 .logo2 img{
     
     width: 130px;
-    left: 20px;
+
     top: 0px;
     height: 80px;
-    margin-left: 100px;
+}
+.searchbar {
+    height: 70px;
+    position: relative;
+    width:max-content;
+}
+.d-flex {
+    margin: 0px auto;
+    height: 30px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .logo3  img{
@@ -129,15 +141,8 @@ body{
 .login span:hover > a{
     color:#b30101;
 }
-.loginform {
-    margin-left: 100px;
-}
 
-.searchbar{
-    margin-top: 30px;
-    margin-left:100px;
-    
-}
+
 .search{
     height: 30px;
 }
@@ -160,6 +165,7 @@ ul {
     
 }
 #header{
+    width: 100%;
     height: 100px;
     background-color: #fff;
     padding-top: 15px;
@@ -171,9 +177,11 @@ ul {
     z-index: 1;
 }
 .row {
+   
     display: flex;
-    height: 55px;
+    height: 70px;
     justify-content: space-around;
+    width: 100%;
 }
 
 #container{
@@ -242,24 +250,27 @@ position: relative;
     height: 550px;
 }
 
-article{
-    float: left;
-    width: 75%;
+.main-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
-article img{
-    border-radius: 15px;
-    height: 500px;
-    width: 90%;
-    margin-left: 100px;
+
+.picslider img{
+    width: 550px;
+    height: 433.344px;
 }
-aside{
-    float: left;
-    width: 25%;
+.asidepic{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 255px;
 }
-aside img{
-    width: 90%;
-    height: 250px;
-    
+
+.asidepic img{
+    width: 255px;
+    height: 212.500px;
+    margin: 0px auto;
 }
 #Content{
     width: 90%;
@@ -274,9 +285,9 @@ aside img{
 .content{
     display: flex;
     width: 50%;
-    margin-top: 30px;
+    margin: 0px auto;
     height: 150px;
-    margin-left: 20px;
+   margin-top:10px
 }
 .content img{
     margin-right: 10px;
@@ -292,5 +303,11 @@ h3 a,h2 a,p a{
     text-decoration: none;
     color: #000;
 }
-
+.paragraph{
+    height: 360px;
+}
+.content-head{
+    margin-left: auto;
+    margin-top: 50px;
+}
 #footer{}

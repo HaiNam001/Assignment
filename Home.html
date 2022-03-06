@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/Home.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/icon/themify-icons/themify-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">   
+     <link rel="stylesheet" href="assets/icon/themify-icons/themify-icons.css">
     <script src="JS/Home.js"></script>
 
 </head>
 <body>
-    <div id="Main">
+    <div id="container">
    
         <div id="header">
             <div class="row">
-                <div class="menu-logo">
+                <div class="menu-logo col-md-2">
                     <li><i id="click" onclick="Show()" class=" ti-menu"></i></li>                     
                     </div>
                     <div class="menu-box" id="menu">
@@ -70,23 +70,25 @@
                         </li>                        
                     </ul>
                     </div>
-                  <div class="logo2">  
-            <img  src="assets/image/logo.jpg" alt="">
+                  <div class="logo2 col-md-2">  
+                 <img  src="assets/image/logo.jpg" alt="">
                   </div>
-                  <div class="searchbar">
-                    <input type="text" class="search" placeholder="Tìm kiếm..."/>
-                    <button type="submit" class="search2">Tìm kiếm</button>
-                    </div>
-                  <div class="loginform">
+                  <div class=" searchbar col-md-4">
+                  <form class="d-flex">
+                    <input class="" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                  </div>
+                  <div class="loginform col-md-2">
                   <div class="logo3">
                       <img src="assets/image/login logo.png" alt="">
                   </div>
                   <div class="login">
-                      <span><a href="">Đăng nhập</a></span>
+                      <span><a href="Login.html">Đăng nhập</a></span>
                       <span><a href="">Đăng ký</a></span>
                   </div>
                   </div>   
-                  <div class="loginform">
+                  <div class="loginform col-md-2">
                     <div class="logo3">
                         <img src="assets/image/phone-call.png" alt="">
                     </div>
@@ -99,7 +101,8 @@
             </div>
         
 
-        <div id="container">
+        <div id="navbar">
+            <div class="row">
             <ul id="nav">
                 <li><a href="Home.html">Trang chủ</a></li>
                 <li><a href="#Content">Kiến thức</a>
@@ -149,18 +152,24 @@
                 </li>
                 
             </ul>
-            
+            </div>
         </div>
 
         <div id="slider">
             <div class="row">
-                <article>
+                <div class="col-md-2">
+                    <img  src="assets/image/nopainnogain.jpg">
+                </div>
+                <div class="picslider col-md-5">
                 <img id="imgsl" onclick="changeImage()"  src="assets/image/imgslider1.jpg" alt="">
-                </article>
-                <aside>
-                 <img src="assets/image/kienthucthehinh.jpg" alt="">
+                </div>
+                <div class=" asidepic col-md-3">
+                 <img  src="assets/image/kienthucthehinh.jpg" alt="">
                  <img src="assets/image/kienthucthehinh1.jpg" alt="">
-            </aside>          
+                </div>
+                <div class="se col-md-2">
+                    <img  src="assets/image/nopainnogain2.jpg">
+                </div>
         </div>
         </div>
         <div id="Content">
@@ -193,7 +202,7 @@
                 </div>
             </div>
             <div class="content">
-                <img src="assets/image/giáo án 2.jpg " alt="">
+                <img src="assets/image/giaoan2.jpg " alt="">
                 <div class="paragraph">
                 <h3><a href=""> Lịch tập cho nữ</a></h3>
                 <p><a href="">Là nữ với mong muốn tập Gym để sở hữu một vóc dáng vạn người mê. Chắc chắn rằng một giáo án, thực đơn, các bài tập gym cho nữ dưới đây là không thể bỏ qua...</a></p>
@@ -204,14 +213,14 @@
                 <h2><a href="">Dinh Dưỡng</a></h2>
             </div>
             <div class="content">
-                <img src="assets/image/Dinh dưỡng 1.jpg" alt="">
+                <img src="assets/image/Dinhduong1.jpg" alt="">
                 <div class="paragraph">
                 <h3><a href="">Tìm hiểu về dinh dưỡng?</a></h3>
                 <p><a href="">Kiến thức dinh dưỡng thể hình là một chuyện quan trọng trong tập Gym. Bạn biết càng nhiều, bạn sẽ ăn uống càng chuẩn và cơ bắp càng phát triển nhanh chóng ...</a></p>
                 </div>
             </div>
             <div class="content">
-                <img src="assets/image/Dinh dưỡng 2.jpg" alt="">
+                <img src="assets/image/DinhDuong2.jpg" alt="">
                 <div class="paragraph">
                 <h3><a href="">Tầm quan trọng của dinh dưỡng?</a></h3>
                 <p><a href="">Dinh dưỡng đóng vai trò quan trọng đối với sức khỏe và sự phát triển của cơ thể. Một chế độ dinh dưỡng hợp lý sẽ giúp phát triển thể chất, cải thiện sức khỏe, tăng cường hệ miễn dịch...</a></p>
@@ -238,7 +247,7 @@
                 <h2><a href="">Dụng cụ tập luyện</a></h2>
             </div>
             <div class="content">
-                <img src="assets/image/Đai-bảo-vệ-lưng-tập-gym.jpg" alt="">
+                <img src="assets/image/dailungbaove.jpg" alt="">
                 <div class="paragraph">
                 <h3><a href="">Có nên sử dụng đai lưng?</a></h3>
                 <p><a href="">Khi nào thì nên đeo đai hỗ trợ. Đai lưng bụng tập gym hỗ trợ thường được dùng khi tập nặng với các bài phức hợp như Deadlift, Squat...</a></p>
