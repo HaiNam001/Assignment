@@ -419,9 +419,12 @@ position: relative;
     height: 175px;    
 }
 #Content{
-    width: 90%;
-   
+   width: 90%;
+   display:flex;
+   flex-direction: column;
+   justify-content: space-around;
 }
+
 .content-head{
     background-color: #f0f0f0;
     height: 50px;
@@ -430,10 +433,11 @@ position: relative;
 }
 .content{
     display: flex;
-    width: 50%;
+    width:50%;
     margin: 0px auto;
     height: 150px;
-   margin-top:10px
+    margin-top:10px;
+    justify-content: space-around;
 }
 .content img{
     margin-right: 10px;
@@ -456,4 +460,11 @@ h3 a,h2 a,p a{
     margin-left: auto;
     margin-top: 50px;
 }
-#footer{}
+
+#footer{
+    margin-top:30px;
+    box-shadow: inset 0 0 5px grey;
+    background-image:url(img/footer.jpg);
+    height:100px;
+    bottom: 0px;
+}
