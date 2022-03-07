@@ -8,7 +8,9 @@ document.getElementById('imgsl').src= imgs[index];
     if(index == 5){
         index = 0;
     }
-    
 }
 setInterval(changeImage,5000);
 
+function Show(){
+    
+}

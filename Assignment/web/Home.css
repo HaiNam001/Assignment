@@ -153,6 +153,7 @@ body{
     position: relative;
     width: 100%;
     min-height: 150vh;
+
 }
 .box-center{
     width: 80%;
@@ -172,7 +173,7 @@ body{
     display: flex;
     z-index: 1000;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
-   background-color: #fff;
+    background-color: #fff;
     left: 0;
     top:0;
     transition: left 0.4s ease;
@@ -423,6 +424,7 @@ position: relative;
    display:flex;
    flex-direction: column;
    justify-content: space-around;
+   
 }
 
 .content-head{
@@ -465,6 +467,8 @@ h3 a,h2 a,p a{
     margin-top:30px;
     box-shadow: inset 0 0 5px grey;
     background-image:url(img/footer.jpg);
-    height:100px;
-    bottom: 0px;
+    height:180px;
+    width: 100%;
+    color:#fff;
+    text-align: center;
 }
