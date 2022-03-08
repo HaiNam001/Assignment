@@ -12,5 +12,10 @@ document.getElementById('imgsl').src= imgs[index];
 setInterval(changeImage,5000);
 
 function Show(){
+    const nav = document.querySelector("nav");
+    const toggle_menu = document.querySelector("#click");
     
+    toggle_menu.onclick = function(){
+        nav.classList.toggle("hide");
+    }
 }

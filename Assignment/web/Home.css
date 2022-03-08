@@ -167,7 +167,7 @@ body{
 }
 .menu-box {
     position: fixed;
-    width: 250px;
+    width: 20%;
     height: 100%;
     align-items: baseline;
     display: flex;
@@ -177,8 +177,7 @@ body{
     left: 0;
     top:0;
     transition: left 0.4s ease;
-    display: none;
-    
+    display:none;   
 }
 
 .row .menu-logo li {

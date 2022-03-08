@@ -80,8 +80,10 @@ public class LoginServlet extends HttpServlet {
         AccountDAO db = new AccountDAO();
         Account a = db.getAccount(username, password);
         if (a != null) // login successfully!
-        {           
-            request.getRequestDispatcher("User.jsp").forward(request, response);
+        {
+            HttpSession session = request.getSession();
+            session.setAttribute("user", username);
+           response.sendRedirect("User.jsp");           
         } else {
             request.setAttribute("mess", "username or password is incorrect!");
             request.getRequestDispatcher("Login.jsp").forward(request, response);
