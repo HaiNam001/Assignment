@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">   
+        <link rel="stylesheet" href="icon/themify-icons/themify-icons.css">
+
+        <link rel="stylesheet" href="kienthuc.css">
+    </head>
+    <body>
+        <div id="container">
+
+            <div id="header">
+                <div class="row">
+                    <div class="menu-logo col-md-2">
+                        <li><i  onclick="Show()" class=" ti-menu"></i></li>                     
+                    </div>
+
+                    <div class="logo2 col-md-2">  
+                        <img  src="img/logo.jpg" alt="">
+                    </div>
+                    <div class=" searchbar col-md-4">
+                        <form class="d-flex">
+                            <input class="" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                    <div class="loginform col-md-2">
+                        <div class="logo3">
+                            <img src="img/login logo.png" alt="">
+                        </div>
+                        <div class="login">
+                            <span><a href="Login.jsp">Đăng nhập</a></span>
+                            <span><a href="SignUp.jsp">Đăng ký</a></span>
+                        </div>
+                    </div>   
+                    <div class="loginform col-md-2">
+                        <div class="logo3">
+                            <img src="img/phone-call.png" alt="">
+                        </div>
+                        <div class="login">
+                            <span>Liên hệ</span>
+                            <span>0123456789</span>
+                        </div>
+                    </div>     
+                </div>       
+            </div>
+
+            <nav>               
+                <div class="menu-box" id="menu">
+                    <div class="menu-logo col-md-2">
+                        <li><i id="click" onclick="Show()" class="ti-menu"></i></li>                     
+                    </div>
+                    <ul>
+                        <li class="Menu">Menu</li>
+                        <li class="has-child"><a href="">Trang chủ</a></li>
+                        <li class="has-child"><a href="">Kiến thức</a>
+                            <ul class="subnav">                 
+                                <li><a href="">Các bài tập ngực</a></li>
+                                <li><a href="">Các bài tập lưng</a></li>
+                                <li><a href="">Các bài tập vai</a></li>
+                                <li><a href="">Các bài tập tay</a></li>
+                                <li><a href="">Các bài tập chân</a></li>
+                            </ul>    
+                        </li>
+                        <li class="has-child"><a href="">Giáo án</a>
+                            <ul class="subnav">
+                                <li><a href="">Tăng cân tăng cơ</a></li>
+                                <li><a href="">Tăng cơ giảm mỡ</a></li>
+                                <li><a href="">Giảm cân giảm mỡ</a></li>
+                                <li><a href="">Lean body</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-child"><a href="">Dinh dưỡng</a>
+                            <ul class="subnav">
+                                <li><a href="">Protein</a></li>
+                                <li><a href="">Carbohydrate</a></li>
+                                <li><a href="">Fat</a></li>
+                                <li><a href="">Vitamin</a></li>
+                            </ul>  
+                        </li>
+                        <li class="has-child"><a href="">Thực phẩm bổ sung</a>
+                            <ul class="subnav">
+                                <li><a href="">Whey Protein</a></li>
+                                <li><a href="">Mass Gainer</a></li>
+                                <li><a href="">Pre-Workout</a></li>
+                                <li><a href="">EAA,BCAA</a></li>
+                                <li><a href="">Vitamin tổng hợp,dầu cá</a></li>
+                                <li><a href="">Creatine</a></li>
+                                <li><a href="">Oat</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-child"><a href="">Dụng cụ tập luyện</a>
+                            <ul class="subnav">
+                                <li><a href="">Quần áo nam nữ</a></li>
+                                <li><a href="">Bình Shaker</a></li>
+                                <li><a href="">Găng tay</a></li>
+                                <li><a href="">Đai lưng</a></li>
+                                <li><a href="">Băng quấn bảo vệ khớp</a></li>
+                            </ul>
+                        </li>                        
+                    </ul>
+                </div>
+            </nav>
+
+            <div id="navbar">
+                <div class="row">
+                    <ul id="nav">
+                        <li><a href="Home.html">Trang chủ</a></li>
+                        <li><a href="Kienthuc.html">Kiến thức</a>
+                            <ul class="subnav">                                 
+                                <li><a href="#chest">Các bài tập ngực</a></li>
+                                <li><a href="#back">Các bài tập lưng</a></li>
+                                <li><a href="#shoulder">Các bài tập vai</a></li>
+                                <li><a href="#arms">Các bài tập tay</a></li>
+                                <li><a href="#legs">Các bài tập chân</a></li>
+                            </ul>    
+                        </li>
+                        <li><a href="">Giáo án</a>
+                            <ul class="subnav">
+                                <li><a href="">Tăng cân tăng cơ</a></li>
+                                <li><a href="">Tăng cơ giảm mỡ</a></li>
+                                <li><a href="">Giảm cân giảm mỡ</a></li>
+                                <li><a href="">Lean body</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Dinh Dưỡng</a>
+                            <ul class="subnav">
+                                <li><a href="">Protein</a></li>
+                                <li><a href="">Carbohydrate</a></li>
+                                <li><a href="">Fat</a></li>
+                                <li><a href="">Vitamin</a></li>
+                            </ul>  
+                        </li>
+                        <li><a href="">Thực phẩm bổ sung</a>
+                            <ul class="subnav">
+                                <li><a href="">Whey Protein</a></li>
+                                <li><a href="">Mass Gainer</a></li>
+                                <li><a href="">Pre-Workout</a></li>
+                                <li><a href="">EAA,BCAA</a></li>
+                                <li><a href="">Vitamin tổng hợp,dầu cá</a></li>
+                                <li><a href="">Creatine</a></li>
+                                <li><a href="">Oat</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Dụng cụ tập luyện <i></i></a>
+                            <ul class="subnav">
+                                <li><a href="">Quần áo nam nữ</a></li>
+                                <li><a href="">Bình Shaker</a></li>
+                                <li><a href="">Găng tay</a></li>
+                                <li><a href="">Đai lưng</a></li>
+                                <li><a href="">Băng quấn bảo vệ khớp</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div id="content">
+                <div id="chest">
+                    <b>1.Các bài tập ngực</b>
+                    <h4>1.1.Nằm đẩy tạ đòn trên ghế phẳng Barbell Bench Press</h4>
+                    <p>Bạn có thể dùng tạ đơn hoặc thanh tạ nằm ngang để thực hiện động tác này. Chú ý khi đẩy tạ cần có lực đẩy mạnh lên trên ngực.</p>
+                    <ol>
+                        <li>Nằm lên ghế phẳng.</li>
+                        <li>2 tay nắm vào thanh tạ với độ rộng sao cho khi xuống tạ.</li>
+                        <li>Cánh tay song song với mặt đất thì cánh tay tạo với cẳng tay 1 góc 90 độ.
+                        </li>
+                        <li>Nâng thanh tạ ra khỏi giá. Giữ tay thẳng.
+                        </li>
+                        <li>Từ từ hạ tạ xuống phía dưới cho đến khi gần chạm vào ngực giữa của bạn.
+                        </li>
+                        <li>Hít vào trong suốt quá trình hạ tạ.
+                        </li>
+                        <li>Dùng cơ ngực đẩy thanh tạ lên. Thở ra.
+                        </li>
+                        <li>Lặp lại chuyển động cho reps sau.
+                        </li>
+                    </ol>
+                    <img src="img/Excercise/cac-bai-tap-nguc-3.jpg">
+                    <h4>1.2. Nằm đẩy tạ đơn trên ghế phẳng Dumbbell Bench Press
+                    </h4>
+                    <p>Động tác này sử dụng loại tạ đơn. Bạn cần cân đối mức tạ có cẩm và đẩy, tránh dùng loại quá nặng. Khi tập nặng cần có người hỗ trợ bên cạnh.
+                    </p>
+                    <ol>
+                        <li>Ngồi thẳng trên ghế tập.
+                        </li>
+                        <li>Mỗi tay cầm 1 quả tạ đơn và đặt tạ trên đỉnh của 2 đùi.
+                        </li>
+                        <li>Hai lòng bàn tay hướng vào nhau và chân đặt chắc chắn trên mặt sàn.
+                        </li>
+                        <li>Cho lưng nằm xuống yên ghế và đồng thời dùng lực 2 đùi để nâng 2 quả tạ đơn lên sao cho bạn giữ hai tạ ở bên trên vai.
+                        </li>
+                        <li>Từ từ xoay cổ tay về phía trước sao cho lòng bàn tay hướng về phía chân và 2 quả tạ thẳng hàng.
+                        </li>
+                        <li>Từ từ hạ tạ xuống phía dưới và đồng thời mở rộng cánh tay sang hai bên.
+                        </li>
+                        <li>Dùng cơ ngực đẩy 2 quả tạ lên, không khóa khuỷu tay và ép cơ ngực lại để kéo 2 cánh tay lại gần nhau.
+                        </li>
+                        <li>Nhịp thở khi đẩy tạ lên đó là thở ra.
+                        </li>
+                        <li>Khóa chặt hai cánh tay ở đỉnh, căng cứng cơ ngực giữ chặt trong vòng 1 đến 2 giây và từ từ hạ tạ xuống.
+                        </li>
+                        <li>Lặp lại toàn bộ động tác.
+                        </li>
+                    </ol>
+                    <img src="img/Excercise/cac-bai-tap-nguc-4.jpg">
+                    <h4>1.3.Nằm đẩy tạ với máy Smith Machine Incline Press</h4>
+                    <p>Điểm khác biệt lớn nhất của bài tập này là thanh tạ gắn vào dàn tạ. Về cơ bản, động tác đẩy tạ tương tự các bài tập ngực khác.</p>
+                    <ol>
+                        <li>Nằm trên ghế đẩy tạ.
+                        </li>
+                        <li>Hai tay nắm thanh đòn tạ.
+                        </li>
+                        <li>Từ từ đẩy lên bằng lực của tay.
+                        </li>
+                        <li>Hạ tạ xuống sát ngực.
+                        </li>
+                        <li>Lặp lại động tác.
+                        </li>
+                    </ol>
+                    <img src="img/Excercise/cac-bai-tap-nguc-5.jpg">
+                    <h4>1.4. Ép ngực với cáp Cable Crossover</h4>
+                    <p>Chú ý khi đứng bạn cần tạo điểm giữ cho cơ thể, tránh di chuyển vị trí trong quá trình tập. Bài tập Cable Crossover kích thích vòng 1 phát triển tốt.
+                    </p>
+                    <ol>
+                        <li>Đứng chân trước chân sau, chân thuận bước lên trước.
+                        </li>
+                        <li>Hai tay cầm hai cáp.
+                        </li>
+                        <li>Lưng hơi khom lại.
+                        </li>
+                        <li>Kéo từ từ từ cáp hai bên chụm lại ở phần trước bụng.
+                        </li>
+                        <li>Từ từ trả cáp về hai bên, lặp lại động tác.
+                        </li>
+                    </ol>
+                    <img src="img/Excercise/cac-bai-tap-nguc-6.jpg">
+                </div>
+
+                <div id="back">
+                    <b>2.Các bài tập lưng</b>
+                    <h4>2.1.Deadlift</h4>
+                    <p>Các chuyên gia huấn luyện viên thể hình cho hay Deadlift không chỉ tác động vào lưng dưới thôi mà còn tập cho cả đùi sau, cơ tay sau, vai… Đây là bài tập thể hiện sức mạnh nên bạn cần đặt mục tiêu nâng tạ nặng hơn sau 1 thời gian tập.</p>
+                    <ol>
+                        <li>Chuẩn bị 1 thanh tạ đòn với bánh tạ trước cẳng chân (ống khuyển).
+                        </li>
+                        <li>2 chân rộng bằng hông
+                        </li>
+                        <li>2 tay cầm vào thanh đòn theo 3 cách là lòng bàn tay hướng tới trước, hướng vào người hoặc kết hợp cả 2.
+                        </li>
+                        <li>Kéo thanh đòn sát vào ống chân, hạ người xuống về tư thế Squat và giữ lưng thẳng.
+                        </li>
+                        <li>Hít sâu và nhấn gót chân xuống sàn, siết cơ mông, đùi sau và lưng và kéo tạ lên.
+                        </li>
+                        <li>Khi tạ lên ngang đùi thì đẩy lưng thẳng, hông hướng tới trước.
+                        </li>
+                        <li>Từ từ hạ thanh đòn xuống sàn và thực hiện lại động tác.
+                        </li>
+                    </ol>
+                    <img src="img/Excercise/cac-bai-tap-lung-xo-cho-nam-2.jpg">
+                    <h4>2.2. Bent-Over Barbell (Gập người kéo tạ đòn)
+                    </h4>
+                    <p>Đây là bài tập lưng xô cho nam được nhiều người áp dụng trong các phòng tập. Bạn cần có 1 thanh tạ đòn để thực hiện động tác này.
+                    </p>
+                    <ol>
+                        <li>Đứng thẳng với 2 tay cầm tạ đòn.
+                        </li>
+                        <li>Gập người tới trước đến khi lưng gần song song với sàn, có thể gập ít hơn nếu chưa quen. Hơi cong nhẹ gối, mắt nhìn tới trước
+                        </li>
+                        <li>Thở ra và kéo mạnh thanh đòn lên hướng về bụng, cánh tay và cùi chỏ nên ở gần thân người.
+                        </li>
+                        <li>Khi kéo lên vị trí cao nhất thì giữ 1 - 2 giây.
+                        </li>
+                        <li>Từ từ hạ tạ về vị trí cũ và thực hiện lại động tác.
+                        </li>
+                    </ol>
+                    <img src="img/Excercise/cac-bai-tap-lung-xo-cho-nam-3.jpg">
+                    <h4>2.3. Hít xà rộng tay (Wide grip Pull Up)
+                    </h4>
+                    <p>Bài tập với xà giúp phát triển cơ vai, xô, là bài tập lưng xô cho nam mà bạn nên thực hiện mỗi ngày để cơ bắp cuồn cuộn.
+                    </p>
+                    <ol>
+                        <li>Lên xà với 2 tay rộng hơn vai.
+                        </li>
+                        <li>Tay càng rộng thì mức độ càng khó. Lòng bàn tay hướng tới trước.
+                        </li>
+                        <li>Thở ra, kéo người lên bằng cách gồng cơ xô và bắp tay, kéo đến khi cằm vượt qua thanh xà.
+                        </li>
+                        <li>Dừng lại 1 chút khi lên đỉnh và từ từ hạ xuống về vị trí ban đầu.
+                        </li>
+                    </ol>
+                    <img src="img/Excercise/cac-bai-tap-lung-xo-cho-nam-4.jpg">
+                    <h4>2.4. Wide-Grip Seated Cable Row (Kéo cáp tay rộng)
+                    </h4>
+                    <p>Đây cũng được cho là bài tập ngực hiệu quả cho nam bên cạnh tác động vào cùng lưng xô.
+
+                    </p>
+                    <ol>
+                        <li>Điều chỉnh mức cáp về vị trí ngang với ngực dưới.
+                        </li>
+                        <li>Mức tạ phù hợp với mình, đặt 2 chân lên vị trí của chúng.
+                        </li>
+                        <li>Lưng thẳng, bắt đầu kéo cáp về phía mình, đồng thời thở ra, cánh tay nên giữ gần người, kéo đến khi thanh đòn chạm nhẹ vào người.
+                        </li>
+                        <li>Từ từ trở lại vị trí ban đầu.
+                        </li>
+                    </ol>
+                    <img src="img/Excercise/cac-bai-tap-lung-xo-cho-nam-6.jpg">
+                </div>
+                <div id="shoulder">
+                    <b>Các bài tập vai</b>
+                    <h4>3.1. Bài tập cử tạ đẩy tạ Barbell Clean & Press
+                    </h4>
+                    <p>Đây là bài tập có sự kết hợp nhiều động tác khác nhau, làm nên một chu trình từ lúc bắt đầu đến khi hoàn thiện được động tác. Bài tập này sử dụng đòn tạ ngang để thực hiện.
+                    </p>
+                    <ol>
+                        <li>Đứng thẳng, hai chân rộng bằng vai.
+                        </li>
+                        <li>Cúi gập lưng vớt tạ bằng 2 tay ở tư thế Deadlift, chú ý khoảng cách giữa các tay khi cầm thanh tạ, tay gần với bánh tạ, hai bên đều nhau.
+                        </li>
+                        <li>Dùng vai kéo tạ mạnh lên, 2 gối duỗi thẳng và nhón gót lên, đến khi tạ nên ngang vai nhanh chóng xoay cổ tay hướng lên trên để đỡ tạ.
+                        </li>
+                        <li>Tiếp tục đẩy tạ mạnh qua đầu thẳng tay.
+                        </li>
+                        <li>Hạ tạ xuống ngang vai và trở lại tư thế Deadlift.
+                        </li>
+                    </ol>
+                    <img src="img/Excercise/cac-bai-tap-vai-3.jpg">
+                    <h4>3.2.Bài tập vai Dumbbell Shoulder Press – Đẩy tạ đôi qua vai
+                    </h4>
+                    <p></p>
+                    <ol>
+                        <li>Dùng lực cơ vai và đẩy tạ lên cao. Chú ý không để 2 quả tạ va chạm vào nhau.
+                        </li>
+                        <li>Chậm rãi hạ tạ xuống tới khi về vị trí 2 tạ ở trên vai bạn một chút.
+                        </li>
+                    </ol>
+                    <img src="img/Excercise/cac-bai-tap-tot-nhat-cho-co-vai-day-voi-ta-don.gif">
+                    <h4>3.3.Tập vai với tạ đĩa</h4>
+                    <p></p>
+                    <ol>
+                        <li>Sử dụng thanh tạ đĩa phù hợp, cầm vào. Chân bằng vai
+                        </li>
+                        <li>Từ từ nâng tạ lên tới khi tay song song với mặt đất
+                        </li>
+                        <li>Lặp lại và đổi bên
+                        </li>
+                    </ol>
+                    <img src="img/Excercise/bai-tap-vai-voi-ta-dia.jpg">
+                    <h4>3.4. Tập vai với dây cáp
+                    </h4>
+                    <p></p>
+                    <ol>
+                        <li>Giữ thẳng lưng không đung đưa
+                        </li>
+                        <li>Dùng cơ vai để nâng dây cáp tập mới ăn sâu vào vai
+                        </li>
+                        <li>Xuống hít vào, kéo lên thở ra
+                        </li>
+                        <li>Nếu bạn tập tại nhà có thể sử dụng: Bộ dây ngũ sắc tại nhà
+                        </li>
+                    </ol>
+                    <img src="img/Excercise/bai-tap-vai-voi-day-cap.jpg">
+                </div>
+                <div id="arms">
+                    <b>Các bài tập tay</b>
+                    <h4>4.1.EZ bar curl</h4>
+                    <ol>
+                        <li>Hai tay cầm đòn tạ Ez, khoảng cách tay rộng bằng vai, lòng bàn tay ngửa.</li>
+                        <li>Từ từ cuốn đòn tạ về phía vai đồng thời hít vào.
+                        </li>
+                        <li>Giữ tư thế một nhịp, siết chặt tay trước rồi thở ra và từ từ hạ tay xuống
+                        </li>
+                    </ol>
+                    <img src="img/Excercise/cac bai tap tay 1.jpg">
+                    <h4>4.2.Hammer Curl</h4>
+                    <ol>
+                        <li> Bắt đầu trong tư thế đứng thẳng người, khoảng cách 2 chân mở rộng bằng vai và mỗi tay cầm một quả tạ Dumbbell có trọng lượng bằng nhau. Đặt 2 cánh tay dọc theo thân người, lòng bàn tay hướng vào trong cơ thể và đây là tư thế bắt đầu của bài tập Hammer Curl.
+
+                        </li>
+                        <li>Giữ khuỷu tay chặt, bắp tay trên cố định và đứng thẳng trên sàn. Chuyển động bàn tay và cẳng tay, từ từ cuốn tạ lên phía trước và thở ra. Tiếp tục đưa tạ lên cao ngang vai, sao cho cơ bắp tay được siết chặt hết cỡ. Lưu ý, bạn có thể tập đồng thời 2 tay hoặc tập từng tay một đều được.
+
+                        </li>
+                        <li> Giữ nguyên tư thế tạ ở vị trí trên cùng trong một vài giây, rồi từ từ hạ tạ xuống vị trí ban đầu và đồng thời hít vào.
+
+                        </li>
+                        <li>Lặp lại toàn bộ động tác để tiếp tục bài tập cho đến khi đạt được số lần yêu cầu.
+                        </li>
+                    </ol>
+                    <img src="img/Excercise/cach-tap-hammer-curl.jpg">
+                    <h4>4.3. Ngồi đẩy bắp sau qua đầu (Seated Overhead Triceps Extension)</h4>
+                    <ol>
+                        <li>Ngôi thẳng lưng, đưa tạ lên qua đầu bằng hai tay</li>
+                        <li>Hạ tạ xuống sâu nâng lên chậm</li>
+                    </ol>
+                    <img class="big-img" src="img/Excercise/day-ta-sau-dau.jpg">
+                    <h4>4.4. TRICEPS DIP – Lên xà kép tập tay sau
+</h4>
+                    <ol>
+                        <li></li>
+                    </ol>
+                    <img src="img/Excercise/tap-tay-sau-voi-xa-kep-TRICEPS-DIP.gif">
+                </div>
+                <div id="legs">
+                    <b>Các bài tập chân</b>
+                    <h4>5.1.Leg Press</h4>
+                    <img src="img/Excercise/calf-raise-leg-press.jpg">
+                    <h4>5.2.Squat</h4>
+                    <img src="img/Excercise/Squat.jpg">
+                    <h4>5.3.Leg Curl</h4>
+                    <img src="img/Excercise/lying-leg-curl.jpg">
+                    <h4>5.4.Nhón bắp chuối</h4>
+                    <img src="img/Excercise/Bai-tap-chan-to-dung-nang-bap-chan.jpg">
+                </div>
+            </div>
+            <div id="footer">
+
+                <h3>Kiến thức thể hình</h3>
+                <p>Chuyên trang cập nhật tin tức và kiến thức thể hình nhanh nhất</p>
+                <p>Liên hệ tư vấn : 0123456789</p>
+
+            </div>
+        </div>
+    </body>
+</html>

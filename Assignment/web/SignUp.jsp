@@ -15,6 +15,18 @@ and open the template in the editor.
     <body>
       <form action="AddAccount" method="post">
   <div class="container">
+      <label for="fullname"><b>Full name</b></label>
+    <input type="text" placeholder="Enter full name" name="fullname" required>
+    
+    <label for="dob"><b>Date of births</b></label>
+    <input type="text" placeholder="Enter DOB" name="dob" required>
+    
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+    
+    <label for="phone"><b>Phone number</b></label>
+    <input type="text" placeholder="Enter phone number" name="phone" required>
+    
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
 

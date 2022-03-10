@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Admin/Desktop/Assignment/Assignment/web/User.jsp</file>
-            <file>file:/C:/Users/Admin/Desktop/Assignment/Assignment/web/Home.css</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment/Assignment/web/SignUp.jsp</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment/Assignment/src/java/Dao/AccountDAO.java</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment/Assignment/src/java/servlet/LoginServlet.java</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment/Assignment/src/java/entity/Account.java</file>
         </group>
     </open-files>
 </project-private>

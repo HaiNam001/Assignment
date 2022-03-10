@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -74,10 +75,14 @@ public class AddAccountServlet extends HttpServlet {
 //        processRequest(request, response);
     String username = request.getParameter("uname");
     String password = request.getParameter("psw");
-    String re_password = request.getParameter("repsw");
+    String fullname = request.getParameter("fullname");
+    String dob = request.getParameter("dob");
+    String email = request.getParameter("email");
+    String Phone = request.getParameter("phone");
+    int phone = Integer.parseInt(Phone);
     AccountDAO db = new AccountDAO();
-    db.addAccount(username, password);
-    response.sendRedirect("Home.html");
+    db.addAccount(username, password,fullname,dob,email,phone);
+    response.sendRedirect("Login.jsp");
     }
 
     /**

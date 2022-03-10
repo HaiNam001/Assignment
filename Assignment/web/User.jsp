@@ -91,7 +91,7 @@
                             <img src="img/login logo.png" alt="">
                         </div>
                         <div class="login">
-                            <span><a class="username" href="">${user}</a></span>
+                            <span><a class="username" href="">${user.username}</a></span>
                             <span><a href="Home.html">Đăng xuất</a></span>
                         </div>
 
@@ -166,14 +166,23 @@
             <div id="Content">
                 <div class="Content-header">
                 <h1>Thông tin tài khoản</h1>
-                <p>Xin chào! ${user}</p>
+                <p>Xin chào! ${user.fullname}</p>
                 </div>
-                <ul>
-                    <li>Chương trình</li>
-                    <li>Thời gian</li>
-                    <li>Ngày bắt đầu</li>
-                    <li>Ngày kết thúc</li>
-                </ul>
+                <table>
+                    <tr>
+                    <th>Họ và tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Email</th>
+                    <th>Số điện thoại</th>
+                    </tr>
+                    
+                    <tr>
+                    <td>${user.fullname}</td>
+                    <td>${user.dob}</td>
+                    <td>${user.email}</td>
+                    <td>${user.phone}</td>
+                    </tr>
+                </table>
             </div>                
 
                         <div id="footer">
@@ -208,6 +217,17 @@ and open the template in the editor.
     margin:0;
     box-sizing: border-box;
 }
+th{
+    padding:10px;
+    color: #333;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    line-height: 20px;
+}
+td{
+    padding:10px;
+}
+
 /* >= Tablet */
 @media (min-width: 740px) {
     .row {
@@ -347,7 +367,7 @@ and open the template in the editor.
 body{
     position: relative;
     width: 100%;
-    min-height: 150vh;
+    min-height: 100vh;
 
 }
 .box-center{
@@ -588,13 +608,14 @@ position: relative;
 }
 #Content{
     background-color: #f4f4f4;
+    height: 400px;
 }
 .Content-header {
     text-align: center;
 }
 #Content ul li{
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 h2{
     line-height: 50px;
