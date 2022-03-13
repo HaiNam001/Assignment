@@ -186,7 +186,7 @@
                             <td>${o.username}</td>
                             <td>${o.password}</td>
                             <td><a href="Update?susername=${o.username}">Update</a>    </td>
-                            <td> <a href="#" onclick="showMess(${o.username})">Delete</a>
+                            <td><a href="Delete?susername=${o.username}" onclick="showMess(o.username)">Delete</a>
                             </td>
                         </tr>
                     </c:forEach>   
@@ -649,9 +649,9 @@ and open the template in the editor.
     </body>
     <script>
          function showMess(username){
-            var option = confirm("Are u sure to delete this student");
+            var option = confirm("Are u sure to delete this account?");
             if(option === true){
-                window.location.href = 'Delete?susername=' + username;
+                window.location.href = 'Delete?susername='+ username;
             }
         }
     </script>
