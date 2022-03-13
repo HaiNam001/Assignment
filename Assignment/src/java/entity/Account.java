@@ -45,7 +45,7 @@ public class Account {
         this.phone = phone;
     }
 
-    public Account(String username, String password, String fullname, String dob, String email, int phone) {
+    public Account(String username, String password, String fullname, String email, int phone, String dob) {
         this.username = username;
         this.password = password;
         this.fullname = fullname;

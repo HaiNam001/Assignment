@@ -6,19 +6,19 @@
 package servlet;
 
 import Dao.AccountDAO;
+import entity.Account;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Admin
  */
-public class AddAccountServlet extends HttpServlet {
+public class UpdateServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,10 +37,10 @@ public class AddAccountServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet AddAccountServlet</title>");            
+            out.println("<title>Servlet UpdateServlet</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet AddAccountServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet UpdateServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -58,7 +58,13 @@ public class AddAccountServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+//        processRequest(request, response);
+        String uusername = request.getParameter("susername");
+        AccountDAO dao = new AccountDAO();
+        Account a = dao.getAccountByUsername(uusername);
+        request.setAttribute("st", a);
+        request.getRequestDispatcher("update.jsp").forward(request, response);
+
     }
 
     /**
@@ -73,16 +79,18 @@ public class AddAccountServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 //        processRequest(request, response);
-    String username = request.getParameter("uname");
-    String password = request.getParameter("psw");
-    String fullname = request.getParameter("fullname");
-    String dob = request.getParameter("dob");
-    String email = request.getParameter("email");
-    String Phone = request.getParameter("phone");
-    int phone = Integer.parseInt(Phone);
-    AccountDAO db = new AccountDAO();
-    db.addAccount(username, password,fullname,email,phone,dob);
-    response.sendRedirect("Login.jsp");
+        String ufullname = request.getParameter("ufullname");
+        String udob = request.getParameter("udob");
+        String uemail = request.getParameter("uemail");
+        String uphone = request.getParameter("uphone");
+        int Uphone = Integer.parseInt(uphone);
+        String uusername = request.getParameter("uuname");
+        String upassword = request.getParameter("upsw");
+     
+
+        AccountDAO dao = new AccountDAO();
+        dao.updateAccount(ufullname, udob, uemail, Uphone, uusername, upassword);
+        response.sendRedirect("Login");
     }
 
     /**

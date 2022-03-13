@@ -9,6 +9,7 @@ import Dao.AccountDAO;
 import entity.Account;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -60,7 +61,11 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+//        processRequest(request, response);
+        AccountDAO dao = new AccountDAO();
+        List<Account> list = dao.getAllAccount();
+        request.setAttribute("list", list);
+        request.getRequestDispatcher("Admin.jsp").forward(request, response);
     }
 
     /**
@@ -81,8 +86,14 @@ public class LoginServlet extends HttpServlet {
         Account a = db.getAccount(username, password);
         if (a != null) // login successfully!
         {
+            if (username.contains("Admin")) {
+                List<Account> list = db.getAllAccount();
+                request.setAttribute("list", list);
+                request.setAttribute("admin", a);
+                request.getRequestDispatcher("Admin.jsp").forward(request, response);
+            }
             HttpSession session = request.getSession();
-            session.setAttribute("user", a);           
+            session.setAttribute("user", a);
             response.sendRedirect("User.jsp");
         } else {
             request.setAttribute("mess", "username or password is incorrect!");

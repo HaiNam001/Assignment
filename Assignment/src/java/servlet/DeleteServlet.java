@@ -12,13 +12,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Admin
  */
-public class AddAccountServlet extends HttpServlet {
+
+public class DeleteServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,10 +37,10 @@ public class AddAccountServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet AddAccountServlet</title>");            
+            out.println("<title>Servlet DeleteServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet AddAccountServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet DeleteServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -58,7 +58,11 @@ public class AddAccountServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+         AccountDAO dao = new AccountDAO();
+        String username = request.getParameter("susername");
+        dao.deleteAccount(username);
+        response.sendRedirect("Login");
+        
     }
 
     /**
@@ -72,17 +76,7 @@ public class AddAccountServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        processRequest(request, response);
-    String username = request.getParameter("uname");
-    String password = request.getParameter("psw");
-    String fullname = request.getParameter("fullname");
-    String dob = request.getParameter("dob");
-    String email = request.getParameter("email");
-    String Phone = request.getParameter("phone");
-    int phone = Integer.parseInt(Phone);
-    AccountDAO db = new AccountDAO();
-    db.addAccount(username, password,fullname,email,phone,dob);
-    response.sendRedirect("Login.jsp");
+        processRequest(request, response);
     }
 
     /**

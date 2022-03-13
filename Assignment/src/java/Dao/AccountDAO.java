@@ -39,8 +39,8 @@ public class AccountDAO {
                         rs.getString(2),
                         rs.getString(3),
                         rs.getString(4),
-                        rs.getString(5),
-                        rs.getInt(6)
+                        rs.getInt(5),
+                        rs.getString(6)
                 );
 
             }
@@ -51,7 +51,7 @@ public class AccountDAO {
         return null;
     }
 
-    public void addAccount(String username, String password,String fullname,String dob,String email,int phone) {
+    public void addAccount(String username, String password,String fullname,String email,int phone,String dob) {
         String query = "insert into Account values(?, ?, ?, ?, ?, ?)";
         Connection conn = null;
         PreparedStatement ps = null;
@@ -63,13 +63,117 @@ public class AccountDAO {
             ps.setString(1, username);
             ps.setString(2, password);
             ps.setString(3, fullname);
-            ps.setString(4, dob);
-            ps.setString(5, email);
-            ps.setInt(6, phone);
+            ps.setString(4, email);
+            ps.setInt(5, phone);
+            ps.setString(6, dob);
             rs = ps.executeQuery();
         } catch (Exception e) {
         }
     }
     
+    public List<Account> getAllAccount() {
+        List<Account> list = new ArrayList<>();
+        String query = "select * from Account \n";
+
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+
+            conn = Model.getConnection();
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                Account a = new Account(rs.getString("username"),
+                        rs.getString("password"),
+                        rs.getString("fullname"),
+                        rs.getString("email"),
+                        rs.getInt("phone"),
+                        rs.getString("dob"));
+                list.add(a);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
     
+     public void updateAccount(String fullname, String dob, String email, int phone,String username,String password) {
+        String query = "update Account \n"
+                + "set [Fullname] = ?,\n"
+                + "DOB = ?,\n"
+                + "Email= ?, \n"
+                + "Phone = ?, \n"
+                + "password = ? \n"
+                + "where username = ?";
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+            conn = Model.getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, fullname);
+            ps.setString(2, dob);
+            ps.setString(3, email);
+            ps.setInt(4, phone);
+            ps.setString(5, password);
+            ps.setString(6, username);
+            ps.executeUpdate();
+            rs = ps.executeQuery();
+        } catch (Exception e) {
+        }
+    }
+    
+     public Account getAccountByUsername(String username) {
+        String query = "select * from Account where username = ?";
+
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+            conn = Model.getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, username);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new Account(rs.getString("username"),
+                        rs.getString("password"),
+                        rs.getString("fullname"),
+                        rs.getString("email"),
+                        rs.getInt("phone"),
+                        rs.getString("dob"));
+            }
+        } catch (Exception e) {
+        }
+        return null;
+    }
+     
+     public void deleteAccount(String username) {
+        String query = "delete from Account where username = ?\n";
+
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+            conn = Model.getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, username);
+            ps.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+     
+    public static void main(String[] args) {
+        AccountDAO dao = new AccountDAO();
+        List<Account> list = new ArrayList<>();
+        list = dao.getAllAccount();
+        for (Account o : list) {
+            System.out.println(o.getUsername());
+        }
+    }
 }
