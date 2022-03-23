@@ -23,6 +23,7 @@ public class Model {
     private static final String password = "123456";
     
     public static Connection getConnection() throws Exception {
+        
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 

@@ -6,6 +6,7 @@
 package Dao;
 
 import entity.Account;
+import entity.Post;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -51,7 +52,7 @@ public class AccountDAO {
         return null;
     }
 
-    public void addAccount(String username, String password,String fullname,String email,int phone,String dob) {
+    public void addAccount(String username, String password, String fullname, String email, int phone, String dob) {
         String query = "insert into Account values(?, ?, ?, ?, ?, ?)";
         Connection conn = null;
         PreparedStatement ps = null;
@@ -70,7 +71,7 @@ public class AccountDAO {
         } catch (Exception e) {
         }
     }
-    
+
     public List<Account> getAllAccount() {
         List<Account> list = new ArrayList<>();
         String query = "select * from Account \n";
@@ -98,13 +99,13 @@ public class AccountDAO {
         }
         return list;
     }
-    
-     public void updateAccount(String fullname, String dob, String email, int phone,String username,String password) {
+
+    public void updateAccount(String fullname, String dob, String email, int phone, String username, String password) {
         String query = "update Account \n"
-                + "set [Fullname] = ?,\n"
-                + "DOB = ?,\n"
-                + "Email= ?, \n"
-                + "Phone = ?, \n"
+                + "set [fullname] = ?,\n"
+                + "dob = ?,\n"
+                + "email= ?, \n"
+                + "phone = ?, \n"
                 + "password = ? \n"
                 + "where username = ?";
         Connection conn = null;
@@ -125,8 +126,8 @@ public class AccountDAO {
         } catch (Exception e) {
         }
     }
-    
-     public Account getAccountByUsername(String username) {
+
+    public Account getAccountByUsername(String username) {
         String query = "select * from Account where username = ?";
 
         Connection conn = null;
@@ -150,8 +151,8 @@ public class AccountDAO {
         }
         return null;
     }
-     
-     public void deleteAccount(String username) {
+
+    public void deleteAccount(String username) {
         String query = "delete from Account where username = ?\n";
 
         Connection conn = null;
@@ -167,13 +168,15 @@ public class AccountDAO {
             e.printStackTrace();
         }
     }
-     
+
+   
+
     public static void main(String[] args) {
-        AccountDAO dao = new AccountDAO();
         List<Account> list = new ArrayList<>();
+        AccountDAO dao = new AccountDAO();
         list = dao.getAllAccount();
         for (Account o : list) {
-            System.out.println(o.getUsername());
+            System.out.println(o);
         }
     }
 }

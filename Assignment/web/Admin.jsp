@@ -25,57 +25,7 @@
                     <div class="menu-logo col-md-2">
                         <li><i id="click" onclick="Show()" class=" ti-menu"></i></li>                     
                     </div>
-                    <!--                    <div class="menu-box" id="menu">
-                                            <ul>
-                                                <li class="Menu">Menu</li>
-                                                <li class="has-child"><a href="">Trang chủ</a></li>
-                                                <li class="has-child"><a href="">Kiến thức</a>
-                                                    <ul class="subnav">                 
-                                                        <li><a href="">Các bài tập ngực</a></li>
-                                                        <li><a href="">Các bài tập lưng</a></li>
-                                                        <li><a href="">Các bài tập vai</a></li>
-                                                        <li><a href="">Các bài tập tay</a></li>
-                                                        <li><a href="">Các bài tập chân</a></li>
-                                                    </ul>    
-                                                </li>
-                                                <li class="has-child"><a href="">Giáo án</a>
-                                                    <ul class="subnav">
-                                                        <li><a href="">Tăng cân tăng cơ</a></li>
-                                                        <li><a href="">Tăng cơ giảm mỡ</a></li>
-                                                        <li><a href="">Giảm cân giảm mỡ</a></li>
-                                                        <li><a href="">Lean body</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="has-child"><a href="">Dinh dưỡng</a>
-                                                    <ul class="subnav">
-                                                        <li><a href="">Protein</a></li>
-                                                        <li><a href="">Carbohydrate</a></li>
-                                                        <li><a href="">Fat</a></li>
-                                                        <li><a href="">Vitamin</a></li>
-                                                    </ul>  
-                                                </li>
-                                                <li class="has-child"><a href="">Thực phẩm bổ sung</a>
-                                                    <ul class="subnav">
-                                                        <li><a href="">Whey Protein</a></li>
-                                                        <li><a href="">Mass Gainer</a></li>
-                                                        <li><a href="">Pre-Workout</a></li>
-                                                        <li><a href="">EAA,BCAA</a></li>
-                                                        <li><a href="">Vitamin tổng hợp,dầu cá</a></li>
-                                                        <li><a href="">Creatine</a></li>
-                                                        <li><a href="">Oat</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="has-child"><a href="">Dụng cụ tập luyện</a>
-                                                    <ul class="subnav">
-                                                        <li><a href="">Quần áo nam nữ</a></li>
-                                                        <li><a href="">Bình Shaker</a></li>
-                                                        <li><a href="">Găng tay</a></li>
-                                                        <li><a href="">Đai lưng</a></li>
-                                                        <li><a href="">Băng quấn bảo vệ khớp</a></li>
-                                                    </ul>
-                                                </li>                        
-                                            </ul>
-                                        </div>-->
+                 
                     <div class="logo2 col-md-2">  
                         <img  src="img/logo.jpg" alt="">
                     </div>
@@ -92,9 +42,10 @@
                             <img src="img/login logo.png" alt="">
                         </div>
                         <div class="login">
-                            <span><a class="username" href="">${admin.username}</a></span>
+                            <span><a class="username" href="Admin.jsp">${sessionScope.admin.username}</a></span>
                             <span><a href="Home.html">Đăng xuất</a></span>
                         </div>
+                                                       
 
                     </div>   
                     <div class="loginform col-md-2">
@@ -114,51 +65,12 @@
                 <div class="row">
                     <ul id="nav">
                         <li><a href="User.jsp">Trang chủ</a></li>
-                        <li><a href="#Content">Kiến thức</a>
-                            <ul class="subnav">                                 
-                                <li><a href="">Các bài tập ngực</a></li>
-                                <li><a href="">Các bài tập lưng</a></li>
-                                <li><a href="">Các bài tập vai</a></li>
-                                <li><a href="">Các bài tập tay</a></li>
-                                <li><a href="">Các bài tập chân</a></li>
-                            </ul>    
+                        <li><a href="Admin.jsp">Quản lý tài khoản</a>                              
                         </li>
-                        <li><a href="">Giáo án</a>
-                            <ul class="subnav">
-                                <li><a href="">Tăng cân tăng cơ</a></li>
-                                <li><a href="">Tăng cơ giảm mỡ</a></li>
-                                <li><a href="">Giảm cân giảm mỡ</a></li>
-                                <li><a href="">Lean body</a></li>
-                            </ul>
+                        <li><a href="Post">Quản lý bài đăng</a>                            
                         </li>
-                        <li><a href="">Dinh Dưỡng</a>
-                            <ul class="subnav">
-                                <li><a href="">Protein</a></li>
-                                <li><a href="">Carbohydrate</a></li>
-                                <li><a href="">Fat</a></li>
-                                <li><a href="">Vitamin</a></li>
-                            </ul>  
-                        </li>
-                        <li><a href="">Thực phẩm bổ sung</a>
-                            <ul class="subnav">
-                                <li><a href="">Whey Protein</a></li>
-                                <li><a href="">Mass Gainer</a></li>
-                                <li><a href="">Pre-Workout</a></li>
-                                <li><a href="">EAA,BCAA</a></li>
-                                <li><a href="">Vitamin tổng hợp,dầu cá</a></li>
-                                <li><a href="">Creatine</a></li>
-                                <li><a href="">Oat</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="">Dụng cụ tập luyện <i></i></a>
-                            <ul class="subnav">
-                                <li><a href="">Quần áo nam nữ</a></li>
-                                <li><a href="">Bình Shaker</a></li>
-                                <li><a href="">Găng tay</a></li>
-                                <li><a href="">Đai lưng</a></li>
-                                <li><a href="">Băng quấn bảo vệ khớp</a></li>
-                            </ul>
-                        </li>
+                     
+                       
 
                     </ul>
                 </div>
@@ -175,7 +87,9 @@
                         <th>Email</th>
                         <th>Số điện thoại</th>
                         <th>username</th>
-                        <th>password</th>
+                        <th>password</th
+                        <th></th>
+                        <th></th>
                     </tr>
                     <c:forEach var="o" items="${list}" >
                         <tr>
@@ -191,6 +105,7 @@
                         </tr>
                     </c:forEach>   
                 </table>
+                
             </div>                
 
             <div id="footer">
@@ -235,6 +150,12 @@ and open the template in the editor.
             td{
                 padding:10px;
             }
+            table, th, td {
+            border: 1px solid black;
+        }
+        table{
+            margin:0 auto;
+        }
 
             /* >= Tablet */
             @media (min-width: 740px) {

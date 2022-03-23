@@ -37,7 +37,7 @@ public class AddAccountServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet AddAccountServlet</title>");            
+            out.println("<title>Servlet AddAccountServlet</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet AddAccountServlet at " + request.getContextPath() + "</h1>");
@@ -73,16 +73,16 @@ public class AddAccountServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 //        processRequest(request, response);
-    String username = request.getParameter("uname");
-    String password = request.getParameter("psw");
-    String fullname = request.getParameter("fullname");
-    String dob = request.getParameter("dob");
-    String email = request.getParameter("email");
-    String Phone = request.getParameter("phone");
-    int phone = Integer.parseInt(Phone);
-    AccountDAO db = new AccountDAO();
-    db.addAccount(username, password,fullname,email,phone,dob);
-    response.sendRedirect("Login.jsp");
+        String username = request.getParameter("uname");
+        String password = request.getParameter("psw");
+        String fullname = request.getParameter("fullname");
+        String Phone = request.getParameter("phone");
+        int phone = Integer.parseInt(Phone);
+        String email = request.getParameter("email");
+        String dob = request.getParameter("dob");
+        AccountDAO db = new AccountDAO();
+        db.addAccount(username, password, fullname, email, phone, dob);
+        response.sendRedirect("Login.jsp");
     }
 
     /**

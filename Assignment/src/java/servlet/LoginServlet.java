@@ -88,8 +88,9 @@ public class LoginServlet extends HttpServlet {
         {
             if (username.contains("Admin")) {
                 List<Account> list = db.getAllAccount();
-                request.setAttribute("list", list);
-                request.setAttribute("admin", a);
+                HttpSession session = request.getSession();
+                session.setAttribute("list", list);
+                session.setAttribute("admin", a);
                 request.getRequestDispatcher("Admin.jsp").forward(request, response);
             }
             HttpSession session = request.getSession();

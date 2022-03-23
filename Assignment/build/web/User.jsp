@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
     <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -35,7 +36,9 @@
                             <img src="img/login logo.png" alt="">
                         </div>
                         <div class="login">
-                            <span><a href="">${user.username}</a></span>
+
+                            <span><a href="User.jsp">${sessionScope.user.username}</a></span>
+
                             <span><a href="Home.html">Đăng xuất</a></span>
                         </div>
                     </div>   
@@ -50,69 +53,69 @@
                     </div>     
                 </div>       
             </div>
-            
+
             <nav>               
-            <div class="menu-box" id="menu">
-                 <div class="menu-logo col-md-2">
+                <div class="menu-box" id="menu">
+                    <div class="menu-logo col-md-2">
                         <li><i id="click" onclick="Show()" class="ti-menu"></i></li>                     
                     </div>
-                <ul>
-                    <li class="Menu">Menu</li>
-                    <li class="has-child"><a href="">Trang chủ</a></li>
-                    <li class="has-child"><a href="">Kiến thức</a>
-                        <ul class="subnav">                 
-                            <li><a href="">Các bài tập ngực</a></li>
-                            <li><a href="">Các bài tập lưng</a></li>
-                            <li><a href="">Các bài tập vai</a></li>
-                            <li><a href="">Các bài tập tay</a></li>
-                            <li><a href="">Các bài tập chân</a></li>
-                        </ul>    
-                    </li>
-                    <li class="has-child"><a href="">Giáo án</a>
-                        <ul class="subnav">
-                            <li><a href="">Tăng cân tăng cơ</a></li>
-                            <li><a href="">Tăng cơ giảm mỡ</a></li>
-                            <li><a href="">Giảm cân giảm mỡ</a></li>
-                            <li><a href="">Lean body</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-child"><a href="">Dinh dưỡng</a>
-                        <ul class="subnav">
-                            <li><a href="">Protein</a></li>
-                            <li><a href="">Carbohydrate</a></li>
-                            <li><a href="">Fat</a></li>
-                            <li><a href="">Vitamin</a></li>
-                        </ul>  
-                    </li>
-                    <li class="has-child"><a href="">Thực phẩm bổ sung</a>
-                        <ul class="subnav">
-                            <li><a href="">Whey Protein</a></li>
-                            <li><a href="">Mass Gainer</a></li>
-                            <li><a href="">Pre-Workout</a></li>
-                            <li><a href="">EAA,BCAA</a></li>
-                            <li><a href="">Vitamin tổng hợp,dầu cá</a></li>
-                            <li><a href="">Creatine</a></li>
-                            <li><a href="">Oat</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-child"><a href="">Dụng cụ tập luyện</a>
-                        <ul class="subnav">
-                            <li><a href="">Quần áo nam nữ</a></li>
-                            <li><a href="">Bình Shaker</a></li>
-                            <li><a href="">Găng tay</a></li>
-                            <li><a href="">Đai lưng</a></li>
-                            <li><a href="">Băng quấn bảo vệ khớp</a></li>
-                        </ul>
-                    </li>                        
-                </ul>
-            </div>
+                    <ul>
+                        <li class="Menu">Menu</li>
+                        <li class="has-child"><a href="">Trang chủ</a></li>
+                        <li class="has-child"><a href="">Kiến thức</a>
+                            <ul class="subnav">                 
+                                <li><a href="">Các bài tập ngực</a></li>
+                                <li><a href="">Các bài tập lưng</a></li>
+                                <li><a href="">Các bài tập vai</a></li>
+                                <li><a href="">Các bài tập tay</a></li>
+                                <li><a href="">Các bài tập chân</a></li>
+                            </ul>    
+                        </li>
+                        <li class="has-child"><a href="">Giáo án</a>
+                            <ul class="subnav">
+                                <li><a href="">Tăng cân tăng cơ</a></li>
+                                <li><a href="">Tăng cơ giảm mỡ</a></li>
+                                <li><a href="">Giảm cân giảm mỡ</a></li>
+                                <li><a href="">Lean body</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-child"><a href="">Dinh dưỡng</a>
+                            <ul class="subnav">
+                                <li><a href="">Protein</a></li>
+                                <li><a href="">Carbohydrate</a></li>
+                                <li><a href="">Fat</a></li>
+                                <li><a href="">Vitamin</a></li>
+                            </ul>  
+                        </li>
+                        <li class="has-child"><a href="">Thực phẩm bổ sung</a>
+                            <ul class="subnav">
+                                <li><a href="">Whey Protein</a></li>
+                                <li><a href="">Mass Gainer</a></li>
+                                <li><a href="">Pre-Workout</a></li>
+                                <li><a href="">EAA,BCAA</a></li>
+                                <li><a href="">Vitamin tổng hợp,dầu cá</a></li>
+                                <li><a href="">Creatine</a></li>
+                                <li><a href="">Oat</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-child"><a href="">Dụng cụ tập luyện</a>
+                            <ul class="subnav">
+                                <li><a href="">Quần áo nam nữ</a></li>
+                                <li><a href="">Bình Shaker</a></li>
+                                <li><a href="">Găng tay</a></li>
+                                <li><a href="">Đai lưng</a></li>
+                                <li><a href="">Băng quấn bảo vệ khớp</a></li>
+                            </ul>
+                        </li>                        
+                    </ul>
+                </div>
             </nav>
 
             <div id="navbar">
                 <div class="row">
                     <ul id="nav">
-                        <li><a href="Home.html">Trang chủ</a></li>
-                        <li><a href="Kienthuc.html">Kiến thức</a>
+                        <li><a href="User.jsp">Trang chủ</a></li>
+                        <li><a href="ShowPost">Kiến thức</a>
                             <ul class="subnav">                                 
                                 <li><a href="">Các bài tập ngực</a></li>
                                 <li><a href="">Các bài tập lưng</a></li>
@@ -137,26 +140,7 @@
                                 <li><a href="">Vitamin</a></li>
                             </ul>  
                         </li>
-                        <li><a href="">Thực phẩm bổ sung</a>
-                            <ul class="subnav">
-                                <li><a href="">Whey Protein</a></li>
-                                <li><a href="">Mass Gainer</a></li>
-                                <li><a href="">Pre-Workout</a></li>
-                                <li><a href="">EAA,BCAA</a></li>
-                                <li><a href="">Vitamin tổng hợp,dầu cá</a></li>
-                                <li><a href="">Creatine</a></li>
-                                <li><a href="">Oat</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="">Dụng cụ tập luyện <i></i></a>
-                            <ul class="subnav">
-                                <li><a href="">Quần áo nam nữ</a></li>
-                                <li><a href="">Bình Shaker</a></li>
-                                <li><a href="">Găng tay</a></li>
-                                <li><a href="">Đai lưng</a></li>
-                                <li><a href="">Băng quấn bảo vệ khớp</a></li>
-                            </ul>
-                        </li>
+
 
                     </ul>
                 </div>
